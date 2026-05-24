@@ -55,6 +55,10 @@ Comments should have an explicit purpose and should improve readability rather t
 
 ## Add a test
 
-Playwright requires a test for the new or modified functionality. An exception would be a pure refactoring, but chances are you are doing more than that.
+Playwright requires a test for the new or modified functionality. An exception would be a
 
-Th
+> **Personal note:** Tests live under `packages/playwright/tests/mcp/`. When running only MCP-related tests locally, I find it faster to scope the test run:
+> ```bash
+> npx playwright test packages/playwright/tests/mcp/
+> ```
+> This avoids waiting for the full test suite and gives quicker feedback during development.
