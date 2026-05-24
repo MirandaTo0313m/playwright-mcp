@@ -46,10 +46,10 @@ ls -la packages/playwright/src/mcp
 Coding style is fully defined in [eslint.config.mjs](https://github.com/microsoft/playwright/blob/main/eslint.config.mjs). Before creating a pull request, or at any moment during development, run linter to check all kinds of things:
 ```bash
 # lint the source base before sending PR
-npm run flint
+npm run lint
 ```
 
-> **Personal note:** `npm run flint` is a typo in the upstream docs — the actual script is `npm run lint`. Double-check `package.json` if the command isn't found.
+> **Personal note:** The upstream docs reference `npm run flint` which appears to be a typo. The correct script is `npm run lint`. Verified against `package.json` — use `npm run lint` to avoid a confusing "script not found" error.
 
 Comments should have an explicit purpose and should improve readability rather than hinder it. If the code would not be understood without comments, consider re-writing the code to make it self-explanatory.
 
@@ -57,4 +57,4 @@ Comments should have an explicit purpose and should improve readability rather t
 
 Playwright requires a test for the new or modified functionality. An exception would be a pure refactoring, but chances are you are doing more than that.
 
-There are multiple [test suites](https://github.com/microsoft/playwright/blob/main/tests) in Playwright that will be executed on the CI. Tests for Playwright MCP are 
+Th
