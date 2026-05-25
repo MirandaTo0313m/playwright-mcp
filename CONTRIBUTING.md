@@ -51,14 +51,10 @@ npm run lint
 
 > **Personal note:** The upstream docs reference `npm run flint` which appears to be a typo. The correct script is `npm run lint`. Verified against `package.json` — use `npm run lint` to avoid a confusing "script not found" error.
 
+> **Personal note:** When working on this locally, I found it helpful to run `npm run watch` in a separate terminal tab and keep it running throughout development. Hot rebuilds are fast, but you still need to restart any running MCP server process to pick up changes.
+
 Comments should have an explicit purpose and should improve readability rather than hinder it. If the code would not be understood without comments, consider re-writing the code to make it self-explanatory.
 
 ## Add a test
 
 Playwright requires a test for the new or modified functionality. An exception would be a
-
-> **Personal note:** Tests live under `packages/playwright/tests/mcp/`. When running only MCP-related tests locally, I find it faster to scope the test run:
-> ```bash
-> npx playwright test packages/playwright/tests/mcp/
-> ```
-> This avoids waiting for the full test suite and gives quicker feedback during development.
